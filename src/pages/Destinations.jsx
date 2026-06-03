@@ -1,5 +1,30 @@
 import React from 'react';
 
+
+function DestinationCard({ id, country, image, places }) {
+  return (
+    <div>
+      
+      <div 
+        className={`Destination${id}`} 
+        style={{ backgroundImage: `url(${image})` }}
+      ></div>
+      
+      
+      <div className={`Text${id}`}>
+        <h1 className={`Text${id}title`}>{country}</h1>
+        <ul>
+          
+          {places.map((place, index) => (
+            <li key={index}>{place}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+
 const destinationsList = [
   {
     id: 1,
@@ -48,7 +73,8 @@ const destinationsList = [
   }
 ];
 
- function Destinations() {
+
+function Destinations() {
   return (
     <div style={{ paddingTop: '56px' }}>
       <section className="DesTitle">
@@ -59,24 +85,19 @@ const destinationsList = [
       </section>
 
       <section id="Destinations">
+      
         {destinationsList.map((item) => (
-          <div key={item.id}>
-            
-            <div 
-              className={`Destination${item.id}`} 
-              style={{ backgroundImage: `url(${item.image})` }}
-            ></div>
-            <div className={`Text${item.id}`}>
-              <h1 className={`Text${item.id}title`}>{item.country}</h1>
-              <ul>
-                {item.places.map((place, index) => (
-                  <li key={index}>{place}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          <DestinationCard 
+            key={item.id}
+            id={item.id}
+            country={item.country}
+            image={item.image}
+            places={item.places}
+          />
         ))}
       </section>
     </div>
   );
-}export default  Destinations;
+}
+
+export default Destinations;
