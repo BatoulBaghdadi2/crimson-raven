@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom"; 
 
 const pricingData = [
   {
@@ -18,7 +19,7 @@ const pricingData = [
   }
 ];
 
- function Pricing() {
+function Pricing() {
   return (
     <div style={{ paddingTop: '56px' }}>
       <section id="pricing">
@@ -35,10 +36,16 @@ const pricingData = [
                   <li key={i}>{feature}</li>
                 ))}
               </ul>
+              
+               <Link to="/login" className="submit-btn" >
+                Book {plan.tier}
+              </Link>
             </div>
           ))}
         </div>
       </section>
     </div>
   );
-}export default  Pricing;
+}
+
+export default Pricing;

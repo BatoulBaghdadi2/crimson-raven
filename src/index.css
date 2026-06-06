@@ -553,3 +553,127 @@
         margin-bottom: 40px;
     }
 }
+
+.login-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); 
+  background-color: #fdf8f7;      
+  font-family: 'Montserrat', sans-serif;
+  padding: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.login-page-container form {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.login-card {
+  background-color: #ffffff;
+  padding: 3rem;
+  border: 1px solid #f2eee9;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(230, 184, 175, 0.15); 
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.login-card label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #2b2523; 
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.login-card input,
+.login-card select {
+  padding: 0.85rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  border: 1px solid #f2eee9;
+  border-radius: 2px;
+  background-color: #fafafa;
+  color: #2b2523;
+  outline: none;
+  margin-bottom: 1.5rem; 
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.login-card *:last-child {
+  margin-bottom: 0;
+}
+
+
+.login-card input:focus,
+.login-card select:focus {
+  border-color: #e6b8af;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(230, 184, 175, 0.25);
+}
+
+
+.submit-btn {
+  background-color: #161E54; 
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #E6E6FA; 
+  color: #161E54;
+}
+
+
+.msg {
+  font-size: 0.85rem;
+  color: #880808; 
+  margin-top: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 2rem 1.5rem;
+  }
+  .login-page-container {
+    background-color: #ffffff; 
+    padding: 1rem;
+  }
+}
+.card .submit-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: auto;  
+}
